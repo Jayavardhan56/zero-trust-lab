@@ -3,6 +3,9 @@
 <head>
     <title>Internal Data Portal (Secured by ZT)</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Auth0 SDK -->
+    <script src="https://cdn.auth0.com/js/auth0/9.19/auth0.min.js"></script>
 </head>
 <body>
     <div id="app-container">
@@ -13,15 +16,20 @@
             <h2>Project Alpha - Financials</h2>
             <p>Fetching data from internal endpoint...</p>
             <button onclick="fetchInternalData()">View Secure Data</button>
-            <div id="data-output" class="secret-data-box">
-                </div>
+            <div id="data-output" class="secret-data-box"></div>
         </div>
 
         <div id="login-info">
-            <p>This resource requires **Zero Trust verification** (Cloudflare + Auth0).</p>
-            <p>Your current **User Identity** will be shown here after successful login.</p>
+            <p>This resource requires <strong>Zero Trust verification</strong> (Cloudflare + Auth0).</p>
+            <p>Your current <strong>User Identity</strong> will be shown here after successful login.</p>
         </div>
+
+        <!-- Login / Logout Buttons -->
+        <button id="login">Login</button>
+        <button id="logout">Logout</button>
+        <div id="message"></div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
