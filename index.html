@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal Data Portal (Secured by ZT)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <h1>Confidential Project Dashboard 🔒</h1>
+        <p>Status: <span id="access-status" class="status-pending">Access Pending...</span></p>
+
+        <div id="data-display" class="hidden">
+            <h2>Project Alpha - Financials</h2>
+            <p>Fetching data from internal endpoint...</p>
+            <button onclick="fetchInternalData()">View Secure Data</button>
+            <div id="data-output" class="secret-data-box">
+                </div>
+        </div>
+
+        <div id="login-info">
+            <p>This resource requires **Zero Trust verification** (Cloudflare + Auth0).</p>
+            <p>Your current **User Identity** will be shown here after successful login.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
