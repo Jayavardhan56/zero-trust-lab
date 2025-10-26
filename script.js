@@ -9,7 +9,7 @@ document.getElementById('data-display').classList.add('hidden');
 var auth0 = new auth0.WebAuth({
   domain: 'dev-qlmmy3wsd6z2uizp.us.auth0.com',       // Replace with Auth0 domain
   clientID: 'A77mrh4iucqvshwOVUywjBGfkK3092sl',  // Replace with Auth0 client ID
-  redirectUri: window.location.href, 
+  redirectUri: window.location.origin, 
   responseType: 'token id_token',
   scope: 'openid profile email'
 });
@@ -52,3 +52,4 @@ function fetchInternalData() {
     document.getElementById('data-output').innerText = confidentialData;
     alert('Secure Data Displayed! Access was granted based on Identity + Policy.');
 }
+
